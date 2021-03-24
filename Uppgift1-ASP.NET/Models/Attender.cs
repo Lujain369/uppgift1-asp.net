@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace uppgift1_asp.net.Model
+namespace uppgift1_asp.net.Models
 {
     public class Attender
     {
