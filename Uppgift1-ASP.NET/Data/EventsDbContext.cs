@@ -19,15 +19,15 @@ namespace uppgift1_asp.net.Data
         public DbSet<Attender> Attender { get; set; }
         public DbSet<Organisation> Organisation { get; set; }
 
-        public void seed()
+        public static void StartSeed(EventsDbContext context)
         {
-            Attender.RemoveRange(Attender);
-            Event.RemoveRange(Event);
+            context.Attender.RemoveRange(context.Attender);
+            context.Event.RemoveRange(context.Event);
             
             Attender Lolo = new Attender { name = "Lolo", email = "antonberglund@hotmail.com", phone_number = "0731337123" };
-            Attender.Add(Lolo);
+            context.Attender.Add(Lolo);
 
-            Event.AddRange(new List<Event>()
+            context.Event.AddRange(new List<Event>()
             {
                  new Event(){ title="Bollspel", date=DateTime.Now, adress="Norrköping", spots_available=400},
                  new Event(){ title="Coronafest", date=DateTime.Now, adress="Kungsbacka", spots_available=400},
@@ -36,7 +36,7 @@ namespace uppgift1_asp.net.Data
 
             });
 
-            SaveChanges();
+            context.SaveChanges();
         } 
     }
 }
