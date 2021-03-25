@@ -7,7 +7,7 @@ namespace uppgift1_asp.net.Models
 {
     public class Event
     {
-        public int event_id { get; set; }
+        public int Id { get; set; }
         public string title { get; set; }
         public int organisation_id { get; set; }
         public string description { get; set; }

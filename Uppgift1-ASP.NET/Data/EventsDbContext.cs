@@ -21,8 +21,8 @@ namespace uppgift1_asp.net.Data
 
         public static void StartSeed(EventsDbContext context)
         {
-            context.Attender.RemoveRange(context.Attender);
-            context.Event.RemoveRange(context.Event);
+            //context.Attender.RemoveRange(context.Attender);
+            //context.Event.RemoveRange(context.Event);
             
             Attender Lolo = new Attender { name = "Lolo", email = "antonberglund@hotmail.com", phone_number = "0731337123" };
             context.Attender.Add(Lolo);

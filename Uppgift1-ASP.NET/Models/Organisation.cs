@@ -7,7 +7,7 @@ namespace uppgift1_asp.net.Models
 {
     public class Organisation
     {
-        public int organisation_id { get; set; }
+        public int Id { get; set; }
         public string name { get; set; }
         public string email { get; set; }
         public string phone_number { get; set; }
